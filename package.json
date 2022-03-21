@@ -1,12 +1,17 @@
 {
-  "name": "webMUSHRA",
+  "name": "webmushra",
   "version": "1.4.3",
   "description": "Web Audio API based Listening Experiment Framework",
   "author": "International Audio Laboratories Erlangen",
-  "repository": "https://github.com/audiolabs/webMUSHRA",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/audiolabs/webMUSHRA.git"
+  },
   "main": "Gruntfile.js",
   "directories": {
-    "test": "test"
+    "doc": "doc",
+    "lib": "lib",
+    "test": "tests"
   },
   "scripts": {
     "test": "grunt test",
@@ -26,5 +31,12 @@
     "grunt-processhtml": "^0.4.1",
     "jsdoc": "^3.4.3"
   },
-  "license": "SEE LICENSE IN LICENSE.txt"
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "dependencies": {
+    "googleapis": "^39.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/audiolabs/webMUSHRA/issues"
+  },
+  "homepage": "https://github.com/audiolabs/webMUSHRA#readme"
 }
