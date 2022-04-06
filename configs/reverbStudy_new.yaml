@@ -1,0 +1,151 @@
+testname: Reverb Study v1
+testId: reverb_study_v1
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: true
+remoteService: service/write.php
+
+
+pages:
+
+    - type: generic
+      id: first_page
+      name: Welcome
+      content: Welcome to the reverb study listening test (v1)! 
+      
+    - 
+          - random
+
+          - type: mushra
+            id: speech_rec01
+            name: Signal = speech, Listener position = near the source
+            content: Please rate the following signals according to their similarity to the reference. Note that the reference was recorded in the actual room (see picture), whereas the other signals were generated from simulations with different degrees of accuracy.
+            mushraImg: rec01_single_annotated.png
+            enableLooping: true 
+            reference: configs/resources/audio/Reference_8bands_rec01_Speech_000.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                LR1: configs/resources/audio/LivingRoom_1_8bands_rec01_Speech_000.wav
+                LR2: configs/resources/audio/LivingRoom_2_8bands_rec01_Speech_000.wav
+                LR3: configs/resources/audio/LivingRoom_3_8bands_rec01_Speech_000.wav
+                LR4: configs/resources/audio/LivingRoom_4_8bands_rec01_Speech_000.wav
+                LR5: configs/resources/audio/LivingRoom_5_8bands_rec01_Speech_000.wav
+                LR6: configs/resources/audio/LivingRoom_6_8bands_rec01_Speech_000.wav
+                Anchor: configs/resources/audio/Anchor_8bands_rec01_Speech_000.wav
+
+          - type: mushra
+            id: speech_rec02
+            name: Signal = speech, Listener position = far from the source (centre)
+            content: Please rate the following signals according to their similarity to the reference. Note that the reference was recorded in the actual room (see picture), whereas the other signals were generated from simulations with different degrees of accuracy.
+            mushraImg: rec02_single_annotated.png
+            enableLooping: true 
+            reference: configs/resources/audio/Reference_8bands_rec02_Speech_000.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                LR1: configs/resources/audio/LivingRoom_1_8bands_rec02_Speech_000.wav
+                LR2: configs/resources/audio/LivingRoom_2_8bands_rec02_Speech_000.wav
+                LR3: configs/resources/audio/LivingRoom_3_8bands_rec02_Speech_000.wav
+                LR4: configs/resources/audio/LivingRoom_4_8bands_rec02_Speech_000.wav
+                LR5: configs/resources/audio/LivingRoom_5_8bands_rec02_Speech_000.wav
+                LR6: configs/resources/audio/LivingRoom_6_8bands_rec02_Speech_000.wav
+                Anchor: configs/resources/audio/Anchor_8bands_rec02_Speech_000.wav
+
+          - type: mushra
+            id: speech_rec03
+            name: Signal = speech, Listener position = far from the source (right)
+            content: Please rate the following signals according to their similarity to the reference. Note that the reference was recorded in the actual room (see picture), whereas the other signals were generated from simulations with different degrees of accuracy.
+            mushraImg: rec03_single_annotated.png
+            enableLooping: true 
+            reference: configs/resources/audio/Reference_8bands_rec03_Speech_000.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                LR1: configs/resources/audio/LivingRoom_1_8bands_rec03_Speech_000.wav
+                LR2: configs/resources/audio/LivingRoom_2_8bands_rec03_Speech_000.wav
+                LR3: configs/resources/audio/LivingRoom_3_8bands_rec03_Speech_000.wav
+                LR4: configs/resources/audio/LivingRoom_4_8bands_rec03_Speech_000.wav
+                LR5: configs/resources/audio/LivingRoom_5_8bands_rec03_Speech_000.wav
+                LR6: configs/resources/audio/LivingRoom_6_8bands_rec03_Speech_000.wav
+                Anchor: configs/resources/audio/Anchor_8bands_rec03_Speech_000.wav
+
+          - type: mushra
+            id: takeFive_rec01
+            name: Signal = music, Listener position = near the source
+            content: The following signals had their reverberation rendered in different ways. Please rate them according to their similarity to the reference.
+            mushraImg: rec01_annotated.png
+            enableLooping: true 
+            reference: configs/resources/audio/Reference_8bands_rec01_TakeFive_000.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                LR1: configs/resources/audio/LivingRoom_1_8bands_rec01_TakeFive_000.wav
+                LR2: configs/resources/audio/LivingRoom_2_8bands_rec01_TakeFive_000.wav
+                LR3: configs/resources/audio/LivingRoom_3_8bands_rec01_TakeFive_000.wav
+                LR4: configs/resources/audio/LivingRoom_4_8bands_rec01_TakeFive_000.wav
+                LR5: configs/resources/audio/LivingRoom_5_8bands_rec01_TakeFive_000.wav
+                LR6: configs/resources/audio/LivingRoom_6_8bands_rec01_TakeFive_000.wav
+                Anchor: configs/resources/audio/Anchor_8bands_rec01_TakeFive_000.wav
+
+          - type: mushra
+            id: takeFive_rec02
+            name: Signal = music, Listener position = far from the source (centre)
+            content: The following signals had their reverberation rendered in different ways. Please rate them according to their similarity to the reference.
+            mushraImg: rec02_annotated.png
+            enableLooping: true 
+            reference: configs/resources/audio/Reference_8bands_rec02_TakeFive_000.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                LR1: configs/resources/audio/LivingRoom_1_8bands_rec02_TakeFive_000.wav
+                LR2: configs/resources/audio/LivingRoom_2_8bands_rec02_TakeFive_000.wav
+                LR3: configs/resources/audio/LivingRoom_3_8bands_rec02_TakeFive_000.wav
+                LR4: configs/resources/audio/LivingRoom_4_8bands_rec02_TakeFive_000.wav
+                LR5: configs/resources/audio/LivingRoom_5_8bands_rec02_TakeFive_000.wav
+                LR6: configs/resources/audio/LivingRoom_6_8bands_rec02_TakeFive_000.wav
+                Anchor: configs/resources/audio/Anchor_8bands_rec02_TakeFive_000.wav
+
+          - type: mushra
+            id: takeFive_rec03
+            name: Signal = music, Listener position = far from the source (right)
+            content: The following signals had their reverberation rendered in different ways. Please rate them according to their similarity to the reference.
+            mushraImg: rec03_annotated.png
+            enableLooping: true 
+            reference: configs/resources/audio/Reference_8bands_rec03_TakeFive_000.wav
+            createAnchor35: false
+            createAnchor70: false
+            stimuli:
+                LR1: configs/resources/audio/LivingRoom_1_8bands_rec03_TakeFive_000.wav
+                LR2: configs/resources/audio/LivingRoom_2_8bands_rec03_TakeFive_000.wav
+                LR3: configs/resources/audio/LivingRoom_3_8bands_rec03_TakeFive_000.wav
+                LR4: configs/resources/audio/LivingRoom_4_8bands_rec03_TakeFive_000.wav
+                LR5: configs/resources/audio/LivingRoom_5_8bands_rec03_TakeFive_000.wav
+                LR6: configs/resources/audio/LivingRoom_6_8bands_rec03_TakeFive_000.wav
+                Anchor: configs/resources/audio/Anchor_8bands_rec03_TakeFive_000.wav
+
+    - type: finish
+      name: Thank you
+      content: Thank you for attending!
+      showResults: true
+      writeResults: true
+      questionnaire:
+          - type: text
+            label: eMail
+            name: email
+          - type: number
+            label: Age
+            name: age
+            min: 0
+            max: 100
+            default: 30
+          - type: likert
+            name: gender
+            label: Gender
+            response:
+             - value: female
+               label: Female
+             - value: male
+               label: Male
+             - value: other
+               label: Other
