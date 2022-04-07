@@ -28,6 +28,7 @@ pages:
             name: Signal = speech, Listener position = near the source
             content: <p></p><p>Please, make sure to listen and <b>rate all conditions</b> in the current page before moving to the next.</p> <p>Please, remember that the scores from 0 to 100 and the nominal labels are related to the <b>similarity with respect to the reference</b>, rather than to an overall quality.</p><p></p>
             mushraImg: rec01_single_annotated.png
+            mustRate: true
             enableLooping: true 
             reference: configs/resources/audio/Reference_8bands_rec01_Speech_000.wav
             createAnchor35: false
@@ -46,6 +47,7 @@ pages:
             name: Signal = speech, Listener position = far from the source (centre)
             content: <p></p><p>Please, make sure to listen and <b>rate all conditions</b> in the current page before moving to the next.</p> <p>Please, remember that the scores from 0 to 100 and the nominal labels are related to the <b>similarity with respect to the reference</b>, rather than to an overall quality.</p><p></p>
             mushraImg: rec02_single_annotated.png
+            mustRate: true
             enableLooping: true 
             reference: configs/resources/audio/Reference_8bands_rec02_Speech_000.wav
             createAnchor35: false
@@ -64,6 +66,7 @@ pages:
             name: Signal = speech, Listener position = far from the source (right)
             content: <p></p><p>Please, make sure to listen and <b>rate all conditions</b> in the current page before moving to the next.</p> <p>Please, remember that the scores from 0 to 100 and the nominal labels are related to the <b>similarity with respect to the reference</b>, rather than to an overall quality.</p><p></p>
             mushraImg: rec03_single_annotated.png
+            mustRate: true
             enableLooping: true 
             reference: configs/resources/audio/Reference_8bands_rec03_Speech_000.wav
             createAnchor35: false
@@ -82,6 +85,7 @@ pages:
             name: Signal = music, Listener position = near the source
             content: <p></p><p>Please, make sure to listen and <b>rate all conditions</b> in the current page before moving to the next.</p> <p>Please, remember that the scores from 0 to 100 and the nominal labels are related to the <b>similarity with respect to the reference</b>, rather than to an overall quality.</p><p></p>
             mushraImg: rec01_annotated.png
+            mustRate: true
             enableLooping: true 
             reference: configs/resources/audio/Reference_8bands_rec01_TakeFive_000.wav
             createAnchor35: false
@@ -100,6 +104,7 @@ pages:
             name: Signal = music, Listener position = far from the source (centre)
             content: <p></p><p>Please, make sure to listen and <b>rate all conditions</b> in the current page before moving to the next.</p> <p>Please, remember that the scores from 0 to 100 and the nominal labels are related to the <b>similarity with respect to the reference</b>, rather than to an overall quality.</p><p></p>
             mushraImg: rec02_annotated.png
+            mustRate: true
             enableLooping: true 
             reference: configs/resources/audio/Reference_8bands_rec02_TakeFive_000.wav
             createAnchor35: false
@@ -118,6 +123,7 @@ pages:
             name: Signal = music, Listener position = far from the source (right)
             content: <p></p><p>Please, make sure to listen and <b>rate all conditions</b> in the current page before moving to the next.</p> <p>Please, remember that the scores from 0 to 100 and the nominal labels are related to the <b>similarity with respect to the reference</b>, rather than to an overall quality.</p><p></p>
             mushraImg: rec03_annotated.png
+            mustRate: true
             enableLooping: true 
             reference: configs/resources/audio/Reference_8bands_rec03_TakeFive_000.wav
             createAnchor35: false
