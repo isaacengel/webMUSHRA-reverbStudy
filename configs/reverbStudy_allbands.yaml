@@ -134,7 +134,7 @@ pages:
     - type: finish
       name: Thank you
       content: <p>Thank you for taking part in this study.</p> <p>To better understand the scope of this research, please visit <a href="https://www.sonicom.eu/" class="ui-link">www.sonicom.eu</a></p>
-      showResults: true
+      showResults: false
       writeResults: true
       questionnaire:
           - type: likert
