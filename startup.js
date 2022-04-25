@@ -223,7 +223,7 @@ var configFile = '';
 if (configArg) {
   configFile = 'configs/' + configArg;
 } else {
-  configFile = 'configs/reverbStudy_allmodels.yaml';
+  configFile = 'configs/reverbStudy_bothtests.yaml';
 }
 
 
