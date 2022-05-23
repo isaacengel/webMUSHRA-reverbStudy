@@ -1,0 +1,280 @@
+testname: Reverb Study
+testId: reverb_study_bothtests_noreference
+bufferSize: 4096
+stopOnErrors: true
+showButtonPreviousPage: true
+remoteService: service/write.php
+
+
+pages:
+
+    - type: generic
+      id: first_page
+      name: Welcome
+      content: <p>This is a listening test which consists of 12 separate trials. In each trial you will be presented with a sound file processed in order to add reverberation and simulate the acoustics of the room in which the sound is being virtually placed. You will be presented with a picture of the room and the position of the sound sources being simulated. You will hear a sample with a reference reverberation, and several other samples with <b>approximated reverberations.</b></p> <p>You are asked to report the <b>similarity of the reverberation</b> of each sample with respect to the reference using a scale from 0 to 100 (do not hesitate in giving a prefect score to a sample, as the reference will be present as one of the approximations).</p> <p>Please, be aware of the fact that the nominal labels <b>[Excellent, Good, Fair, Poor, Bad]</b>, featured in the scale from 0 to 100, are to be intended as a general score of <b>similarity</b> between each sample and the reference.</p> <p>You can listen to the reference and to the approximations in any order and as many times as you like. The sound samples are between 5 and 8 seconds long. The test should not take more than 1 hour.</p> <p><b>The use of headphones is required.</b></p> <p><b>IMPORTANT:</b> if you own a pair of <b>Sennheiser HD650 headphones</b>, you are advised to use it.</p> <p> Before the test starts you can set the volume to your convenience and after the test you will get an overview of your results.</p> <p><i>Test developed under <a href="https://www.sonicom.eu/" class="ui-link">SONICOM</a> project.</i></p> <p><img src="configs/resources/images/logo-sonicom.png" <="" p=""></p>
+
+    - type: volume
+      id: volume_page
+      name: Volume adjustment
+      content: Please adjust the volume to a comfortable level.
+      stimulus: configs/resources/audio/Reference_8bands_rec01_TakeFive_000.wav
+      defaultVolume: 0.5
+
+    - 
+          - random
+
+          - type: mushra
+            id: geometry_speech_rec01
+            name: Signal = speech, Listener position = near the source
+            content: <p></p><p>Please, make sure to listen and <b>rate all conditions</b> in the current page before moving to the next.</p> <p>Please, remember that the scores from 0 to 100 and the nominal labels are related to the <b>similarity with respect to the reference</b>, rather than to an overall quality.</p><p></p>
+            mushraImg: rec01_single_annotated.png
+            mustRate: true
+            enableLooping: true 
+            reference: configs/resources/audio/LivingRoom_1_8bands_rec01_Speech_000.wav
+            createAnchor35: true
+            createAnchor70: false
+            stimuli:
+                LR2: configs/resources/audio/LivingRoom_2_8bands_rec01_Speech_000.wav
+                LR3: configs/resources/audio/LivingRoom_3_8bands_rec01_Speech_000.wav
+                LR5: configs/resources/audio/LivingRoom_5_8bands_rec01_Speech_000.wav
+                LR6: configs/resources/audio/LivingRoom_6_8bands_rec01_Speech_000.wav
+
+          - type: mushra
+            id: geometry_speech_rec02
+            name: Signal = speech, Listener position = far from the source (centre)
+            content: <p></p><p>Please, make sure to listen and <b>rate all conditions</b> in the current page before moving to the next.</p> <p>Please, remember that the scores from 0 to 100 and the nominal labels are related to the <b>similarity with respect to the reference</b>, rather than to an overall quality.</p><p></p>
+            mushraImg: rec02_single_annotated.png
+            mustRate: true
+            enableLooping: true 
+            reference: configs/resources/audio/LivingRoom_1_8bands_rec02_Speech_000.wav
+            createAnchor35: true
+            createAnchor70: false
+            stimuli:
+                LR2: configs/resources/audio/LivingRoom_2_8bands_rec02_Speech_000.wav
+                LR3: configs/resources/audio/LivingRoom_3_8bands_rec02_Speech_000.wav
+                LR5: configs/resources/audio/LivingRoom_5_8bands_rec02_Speech_000.wav
+                LR6: configs/resources/audio/LivingRoom_6_8bands_rec02_Speech_000.wav
+
+          - type: mushra
+            id: geometry_speech_rec03
+            name: Signal = speech, Listener position = far from the source (right)
+            content: <p></p><p>Please, make sure to listen and <b>rate all conditions</b> in the current page before moving to the next.</p> <p>Please, remember that the scores from 0 to 100 and the nominal labels are related to the <b>similarity with respect to the reference</b>, rather than to an overall quality.</p><p></p>
+            mushraImg: rec03_single_annotated.png
+            mustRate: true
+            enableLooping: true 
+            reference: configs/resources/audio/LivingRoom_1_8bands_rec03_Speech_000.wav
+            createAnchor35: true
+            createAnchor70: false
+            stimuli:
+                LR2: configs/resources/audio/LivingRoom_2_8bands_rec03_Speech_000.wav
+                LR3: configs/resources/audio/LivingRoom_3_8bands_rec03_Speech_000.wav
+                LR5: configs/resources/audio/LivingRoom_5_8bands_rec03_Speech_000.wav
+                LR6: configs/resources/audio/LivingRoom_6_8bands_rec03_Speech_000.wav
+
+          - type: mushra
+            id: geometry_takeFive_rec01
+            name: Signal = music, Listener position = near the source
+            content: <p></p><p>Please, make sure to listen and <b>rate all conditions</b> in the current page before moving to the next.</p> <p>Please, remember that the scores from 0 to 100 and the nominal labels are related to the <b>similarity with respect to the reference</b>, rather than to an overall quality.</p><p></p>
+            mushraImg: rec01_annotated.png
+            mustRate: true
+            enableLooping: true 
+            reference: configs/resources/audio/LivingRoom_1_8bands_rec01_TakeFive_000.wav
+            createAnchor35: true
+            createAnchor70: false
+            stimuli:
+                LR2: configs/resources/audio/LivingRoom_2_8bands_rec01_TakeFive_000.wav
+                LR3: configs/resources/audio/LivingRoom_3_8bands_rec01_TakeFive_000.wav
+                LR5: configs/resources/audio/LivingRoom_5_8bands_rec01_TakeFive_000.wav
+                LR6: configs/resources/audio/LivingRoom_6_8bands_rec01_TakeFive_000.wav
+
+          - type: mushra
+            id: geometry_takeFive_rec02
+            name: Signal = music, Listener position = far from the source (centre)
+            content: <p></p><p>Please, make sure to listen and <b>rate all conditions</b> in the current page before moving to the next.</p> <p>Please, remember that the scores from 0 to 100 and the nominal labels are related to the <b>similarity with respect to the reference</b>, rather than to an overall quality.</p><p></p>
+            mushraImg: rec02_annotated.png
+            mustRate: true
+            enableLooping: true 
+            reference: configs/resources/audio/LivingRoom_1_8bands_rec02_TakeFive_000.wav
+            createAnchor35: true
+            createAnchor70: false
+            stimuli:
+                LR2: configs/resources/audio/LivingRoom_2_8bands_rec02_TakeFive_000.wav
+                LR3: configs/resources/audio/LivingRoom_3_8bands_rec02_TakeFive_000.wav
+                LR5: configs/resources/audio/LivingRoom_5_8bands_rec02_TakeFive_000.wav
+                LR6: configs/resources/audio/LivingRoom_6_8bands_rec02_TakeFive_000.wav
+
+          - type: mushra
+            id: geometry_takeFive_rec03
+            name: Signal = music, Listener position = far from the source (right)
+            content: <p></p><p>Please, make sure to listen and <b>rate all conditions</b> in the current page before moving to the next.</p> <p>Please, remember that the scores from 0 to 100 and the nominal labels are related to the <b>similarity with respect to the reference</b>, rather than to an overall quality.</p><p></p>
+            mushraImg: rec03_annotated.png
+            mustRate: true
+            enableLooping: true 
+            reference: configs/resources/audio/LivingRoom_1_8bands_rec03_TakeFive_000.wav
+            createAnchor35: true
+            createAnchor70: false
+            stimuli:
+                LR2: configs/resources/audio/LivingRoom_2_8bands_rec03_TakeFive_000.wav
+                LR3: configs/resources/audio/LivingRoom_3_8bands_rec03_TakeFive_000.wav
+                LR5: configs/resources/audio/LivingRoom_5_8bands_rec03_TakeFive_000.wav
+                LR6: configs/resources/audio/LivingRoom_6_8bands_rec03_TakeFive_000.wav
+
+          - type: mushra
+            id: absorption_speech_rec01
+            name: Signal = speech, Listener position = near the source
+            content: <p></p><p>Please, make sure to listen and <b>rate all conditions</b> in the current page before moving to the next.</p> <p>Please, remember that the scores from 0 to 100 and the nominal labels are related to the <b>similarity with respect to the reference</b>, rather than to an overall quality.</p><p></p>
+            mushraImg: rec01_single_annotated.png
+            mustRate: true
+            enableLooping: true 
+            reference: configs/resources/audio/LivingRoom_1_8bands_rec01_Speech_000.wav
+            createAnchor35: true
+            createAnchor70: false
+            stimuli:
+                B4: configs/resources/audio/LivingRoom_1_4bands_rec01_Speech_000.wav
+                B2: configs/resources/audio/LivingRoom_1_2bands_rec01_Speech_000.wav
+                B1: configs/resources/audio/LivingRoom_1_1bands_rec01_Speech_000.wav
+
+          - type: mushra
+            id: absorption_speech_rec02
+            name: Signal = speech, Listener position = far from the source (centre)
+            content: <p></p><p>Please, make sure to listen and <b>rate all conditions</b> in the current page before moving to the next.</p> <p>Please, remember that the scores from 0 to 100 and the nominal labels are related to the <b>similarity with respect to the reference</b>, rather than to an overall quality.</p><p></p>
+            mushraImg: rec02_single_annotated.png
+            mustRate: true
+            enableLooping: true 
+            reference: configs/resources/audio/LivingRoom_1_8bands_rec02_Speech_000.wav
+            createAnchor35: true
+            createAnchor70: false
+            stimuli:
+                B4: configs/resources/audio/LivingRoom_1_4bands_rec02_Speech_000.wav
+                B2: configs/resources/audio/LivingRoom_1_2bands_rec02_Speech_000.wav
+                B1: configs/resources/audio/LivingRoom_1_1bands_rec02_Speech_000.wav
+
+          - type: mushra
+            id: absorption_speech_rec03
+            name: Signal = speech, Listener position = far from the source (right)
+            content: <p></p><p>Please, make sure to listen and <b>rate all conditions</b> in the current page before moving to the next.</p> <p>Please, remember that the scores from 0 to 100 and the nominal labels are related to the <b>similarity with respect to the reference</b>, rather than to an overall quality.</p><p></p>
+            mushraImg: rec03_single_annotated.png
+            mustRate: true
+            enableLooping: true 
+            reference: configs/resources/audio/LivingRoom_1_8bands_rec03_Speech_000.wav
+            createAnchor35: true
+            createAnchor70: false
+            stimuli:
+                B4: configs/resources/audio/LivingRoom_1_4bands_rec03_Speech_000.wav
+                B2: configs/resources/audio/LivingRoom_1_2bands_rec03_Speech_000.wav
+                B1: configs/resources/audio/LivingRoom_1_1bands_rec03_Speech_000.wav
+
+          - type: mushra
+            id: absorption_takeFive_rec01
+            name: Signal = music, Listener position = near the source
+            content: <p></p><p>Please, make sure to listen and <b>rate all conditions</b> in the current page before moving to the next.</p> <p>Please, remember that the scores from 0 to 100 and the nominal labels are related to the <b>similarity with respect to the reference</b>, rather than to an overall quality.</p><p></p>
+            mushraImg: rec01_annotated.png
+            mustRate: true
+            enableLooping: true 
+            reference: configs/resources/audio/LivingRoom_1_8bands_rec01_TakeFive_000.wav
+            createAnchor35: true
+            createAnchor70: false
+            stimuli:
+                B4: configs/resources/audio/LivingRoom_1_4bands_rec01_TakeFive_000.wav
+                B2: configs/resources/audio/LivingRoom_1_2bands_rec01_TakeFive_000.wav
+                B1: configs/resources/audio/LivingRoom_1_1bands_rec01_TakeFive_000.wav
+
+          - type: mushra
+            id: absorption_takeFive_rec02
+            name: Signal = music, Listener position = far from the source (centre)
+            content: <p></p><p>Please, make sure to listen and <b>rate all conditions</b> in the current page before moving to the next.</p> <p>Please, remember that the scores from 0 to 100 and the nominal labels are related to the <b>similarity with respect to the reference</b>, rather than to an overall quality.</p><p></p>
+            mushraImg: rec02_annotated.png
+            mustRate: true
+            enableLooping: true 
+            reference: configs/resources/audio/LivingRoom_1_8bands_rec02_TakeFive_000.wav
+            createAnchor35: true
+            createAnchor70: false
+            stimuli:
+                B4: configs/resources/audio/LivingRoom_1_4bands_rec02_TakeFive_000.wav
+                B2: configs/resources/audio/LivingRoom_1_2bands_rec02_TakeFive_000.wav
+                B1: configs/resources/audio/LivingRoom_1_1bands_rec02_TakeFive_000.wav
+
+          - type: mushra
+            id: absorption_takeFive_rec03
+            name: Signal = music, Listener position = far from the source (right)
+            content: <p></p><p>Please, make sure to listen and <b>rate all conditions</b> in the current page before moving to the next.</p> <p>Please, remember that the scores from 0 to 100 and the nominal labels are related to the <b>similarity with respect to the reference</b>, rather than to an overall quality.</p><p></p>
+            mushraImg: rec03_annotated.png
+            mustRate: true
+            enableLooping: true 
+            reference: configs/resources/audio/LivingRoom_1_8bands_rec03_TakeFive_000.wav
+            createAnchor35: true
+            createAnchor70: false
+            stimuli:
+                B4: configs/resources/audio/LivingRoom_1_4bands_rec03_TakeFive_000.wav
+                B2: configs/resources/audio/LivingRoom_1_2bands_rec03_TakeFive_000.wav
+                B1: configs/resources/audio/LivingRoom_1_1bands_rec03_TakeFive_000.wav
+
+    - type: generic
+      id: last_page
+      name: Almost finished...
+      content: In the next page you will be able to submit the results. Once you click Next, you will not be able to go back. If you want to change any of the ratings, please do it now.
+
+    - type: finish
+      name: Thank you
+      content: <p>Thank you for taking part in this study.</p> <p>To better understand the scope of this research, please visit <a href="https://www.sonicom.eu/" class="ui-link">www.sonicom.eu</a></p>
+      showResults: false
+      writeResults: true
+      questionnaire:
+          - type: likert
+            name: age_range
+            label: Age range
+            response:
+             - value: 18_27
+               label: 18-27
+             - value: 28_37
+               label: 28-37
+             - value: 38_47
+               label: 38-47
+             - value: 48_57
+               label: 48-57
+             - value: 58_67
+               label: 58-67
+             - value: 68_inf
+               label: 68 or more
+          - type: likert
+            name: sex
+            label: Sex
+            response:
+             - value: female
+               label: Female
+             - value: male
+               label: Male
+             - value: other
+               label: Other
+             - value: prefer_not_say
+               label: I prefer no to say
+          - type: likert
+            name: headphone_type
+            label: Type of headphones
+            response:
+             - value: sennheiser_hd650
+               label: Sennheiser HD650
+             - value: other_overear
+               label: Other over-ear headphones
+             - value: other_inear
+               label: Other in-ear headphones
+             - value: other
+               label: Other
+          - type: likert
+            name: experience
+            label: Experience in critical listening or experiments similar to this one
+            response:
+             - value: none
+               label: None
+             - value: little
+               label: A little
+             - value: very
+               label: Very experienced
+          - type: likert
+            name: impairment
+            label: Are you affected by any kind of auditory impairment?
+            response:
+             - value: yes
+               label: Yes
+             - value: no
+               label: No
